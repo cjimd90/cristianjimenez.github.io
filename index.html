@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Cristian Jimenez Development to your like</title>
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <link rel="stylesheet" href="">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,700,700i&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+    <i class="icon-menu burger-button" id="burger-menu"></i>
+    <header class="header">
+      <div class="container">
+        <figure class="logo">
+          <img src="images/favicon.png" height="50" alt="Cristian Jimenez" class="logo">
+        </figure>
+        <nav class="menu">
+          <ol>
+            <li>
+              <a class="link" href="#about">About</a>
+            </li>
+            <li>
+              <a class="link" href="#skill">Skills</a>
+            </li>
+            <!--<li>
+              <a class="link" href="#contact">Contact</a>
+            </li>-->
+          </ol>
+        </nav>
+      </div>
+    </header>
+    <section class="hero">
+      <div class="container">
+        <img class="hero-image" src="images/cj-white.png" width="500" height="300" alt="Cristian Jimenez Development to your like"> 
+      </div>
+    </section>
+    <section id="about" class="about">
+      <div class="container">
+        <h2 class="about-title">About</h2>
+        <article>
+          <figure class="about-imageContainer">
+            <img class="about-image" width="500" src="images/me.png" alt="Cristian Jimenez Development to your like">
+          </figure>
+          <div class="about-details">
+            <p class="about-description">
+              FullStack developer with knowledge to develop projects with HTML, CSS with Resposive Design, 
+              Flexbox, Grid Layout, Animations and JavaScript with technologies for the interface with VueJS, 
+              for backend I work in NodeJS and ExpressJS.
+            </p>
+            </br>
+            <p class="about-description">
+              I also have knowledge in Wordpress, PHP, Amazon Web Services, GitLAb, Git-SCM, GitHub and also 
+              in UI tools like Adobe XD and Figma. 
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+    <section id="skill" class="skill"> 
+      <div class="container">
+        <div class="skill-title">
+          <h2>Skills</h2>
+        </div>
+        <div class="skill-primary">
+          <img src="images/developer.png" alt="" width="200"class="skill-primary-image">
+          <h1>FullStack Developer</h3>
+        </div>
+        <article class="skill-details">
+          <img class="skill-image mongo" src="images/MongoDB1.png" width="150" alt="MongoDB"/>
+          <img class="skill-image express" src="images/expressjs.png" width="150" alt="ExpressJS"/>
+          <img class="skill-image vue" src="images/vuejs.jpg" width="150" alt="VueJS"/>
+          <img class="skill-image node" src="images/nodejs.jpeg" width="150" alt="NodeJS"/>
+        </article>
+      </div>
+    </section>
+    <!--<section id="contact" class="contact">
+      <div class="container">
+        <h2>Contact</h2>
+        <form action="/suscripcion/" class="form">
+          <input type="text" placeholder="Let me your name?" id="email">
+          <input type="text" placeholder="Phone" id="phone">
+          <input type="email" placeholder="Email" id="email">
+          <textarea type="textarea" width="502" rows="10" columns="50" placeholder="How I can help you?" id="message"></textarea>
+          <input class="button" type="submit" value="Send" />
+        </form>
+      </div>
+    </section>-->
+    <section class="social">
+      <div class="container social-container">
+        <h3 class="social-title">Follow me</h3>
+        <div class="social-conatinerNetworks">
+          <a href="https://github.com/cjimd90" class="social-link github"></a>
+          <a href="https://twitter.com/Cyjimd" class="social-link twitter"></a>
+          <a href="https://facebook.com/Cyjimd" class="social-link facebook"></a>
+          <a href="https://instagram.com/cyjimd" class="social-link instagram"></a>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div>
+          <p>2019 Cristian Jimenez - Development to your like. <i>All rights reserved</i></p>
+        </div>
+      </div>
+    </footer>
+    <script>
+      // console.log('Hola mundo! es mi primera linea en JS');
+      const ipad = window.matchMedia('screen and (max-width: 767px)')
+      const menu = document.querySelector('.menu');
+      // console.log(menu);
+      const burgerButton = document.querySelector('#burger-menu');
+      // console.log(burgerButton);
+
+
+      ipad.addListener(validation)
+
+      function validation(event) {
+        if (event.matches) {
+          burgerButton.addEventListener('click', hideShow)
+        } else {
+          burgerButton.removeEventListener('click', hideShow)
+        }
+      }
+      validation(ipad);
+
+
+      function hideShow() {
+        if (menu.classList.contains('is-active')) {
+          menu.classList.remove('is-active');
+        } else {
+          menu.classList.add('is-active');
+        }
+      }
+    </script>
+  </body>
+</html>
