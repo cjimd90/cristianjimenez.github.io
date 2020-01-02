@@ -617,4 +617,7 @@ form input {
     text-align: center;
     margin: 0;
   }
+  .footer p {
+    margin-bottom: 0;
+  }
 }
