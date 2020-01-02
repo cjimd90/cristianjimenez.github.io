@@ -548,6 +548,9 @@ form input {
       background-size: 100%;
       
     }
+    .footer p {
+      margin-bottom: 0;
+    }
   }
   
 @media screen and (max-width: 480px) {
